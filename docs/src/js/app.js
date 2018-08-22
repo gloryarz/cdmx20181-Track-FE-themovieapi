@@ -4,19 +4,16 @@ const userSearch = document.getElementById('userSearch');
 // http://www.omdbapi.com/?apikey=58ac39cb&s=flash
 const mainUrl = 'http://www.omdbapi.com/?apikey=58ac39cb&s=';
 let userValue = 'flash';
-
-
-/*
 btnSearch.addEventListener('click', el => {
+    el.preventDefault();
     userValue = userSearch.value;
-    console.log(userValue);
-    inner.innerHTML = userValue;
+    console.log(userValue)
+    let url = mainUrl + userValue;
+    fetching(url);
 });
-*/
 
-let url = mainUrl + userValue;
+const fetching = (url) => { 
 console.log(url);
-
 fetch(url)
 .then(resp => resp.json())
 .then(data => {
@@ -27,7 +24,7 @@ fetch(url)
         }
     }
 })
-
+}
 let moviesArr = [];
 
 const gettingMovies = (search) => {
@@ -43,9 +40,7 @@ const gettingMovies = (search) => {
 
 const print = () => {
     moviesArr.forEach(element => {
-        console.log(element[1])
         let movieID = element[0];
-        console.log(movieID)
         let movieTitle = element[1];
         let movieYear = element[2];
         let movieType = element[3];
