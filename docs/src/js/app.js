@@ -111,9 +111,15 @@ const moreData = (data) => {
     let modalPoster = data.Poster;
     let modalRating = data.imdbRating;
     for (i = 0; i < innerModal.length; i++){
-        console.log(innerModal[i])
-        innerModal[i].innerHTML = `<img src="${modalPoster}">
-        <p><span>Actors: </span>${modalActors}</p>
+        innerModal[i].innerHTML = `<img src="${modalPoster}"><br>
+        <p><span class="boldi">Rated: </span>${modalRated}</p><br>
+        <p><span class="boldi">Rating: </span>${modalRating}</p><br>
+        <p><span class="boldi">Year: </span>${modalYear}</p><br>
+        <p><span class="boldi">Country: </span>${modalCountry}</p><br>
+        <p><span class="boldi">Genre: </span>${modalGenre}</p><br>
+        <p><span class="boldi">Actors: </span>${modalActors}</p><br>
+        <p><span class="boldi">Plot: </span>
+        ${modalPlot}</p>
         `;
     }
 }
