@@ -1,0 +1,32 @@
+.size {
+    height: 20rem;
+    position: absolute;
+    
+    
+}
+
+.btnAdd {
+    position: relative;
+  float: left;
+}
+
+.backDiv {
+    display: inline-block;
+    height: 22rem;
+    width: 35rem;
+    background-color: rgb(219, 233, 233);
+    padding: 1rem;
+    margin: auto;
+}   
+
+.rigthS {
+    width: 15rem;
+    height: 20rem;
+    display: inline-table;
+}
+
+.leftS {
+    display: inline-table;
+    width: 15.5rem;
+    height: 20rem;
+}
